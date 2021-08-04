@@ -15,8 +15,14 @@
                     <p class="small mb-0">Categorías: <?php the_category('/');?> Etiquetas: 
                     <?php the_tags('',' / ', '') ?>
                     </p>
-
-                    <img src="/img/1200.jpeg" alt="" class="img-fluid mb-3">
+                    <?php 
+                    if ( has_post_thumbnail() ) {
+                        the_post_thumbnail('post-thumbnails', array(
+                            'class'=> 'img-fluid mb-3'
+                        ));
+                    }
+                    ?>
+                   <!-- <img src="/img/1200.jpeg" alt="" class="img-fluid mb-3">-->
                     <p> <?php the_excerpt()//trae el parrafo de la entrada?> </p>
                     <a href="<?php the_permalink();?>" class="btn btn-primary">Más info...</a>
                 </div>
