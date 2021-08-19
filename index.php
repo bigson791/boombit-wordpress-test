@@ -34,7 +34,6 @@
                     <div class="card-body">
                         <?php
                            get_template_part( 'template-parts/content', 'paginacion');
-                           echo bootstrap_pagination();
                         ?>
                     </div>   
                 <!--Paginación-->
