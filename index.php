@@ -23,7 +23,7 @@
                     }
                     ?>
                    <!-- <img src="/img/1200.jpeg" alt="" class="img-fluid mb-3">-->
-                    <p> <?php the_excerpt()//trae el parrafo de la entrada?> </p>
+                    <p> <?php the_excerpt();//trae el parrafo de la entrada?> </p>
                     <a href="<?php the_permalink();?>" class="btn btn-primary">Más info...</a>
                 </div>
                 <?php endwhile; endif; ?>
@@ -32,15 +32,10 @@
                 <!--Entradas-->
                 <!--Paginación-->
                     <div class="card-body">
-                        <nav aria-label="Page navigation example">
-                            <ul class="pagination">
-                              <li class="page-item"><a class="page-link" href="#">Anterior</a></li>
-                              <li class="page-item active   "><a class="page-link" href="#">1</a></li>
-                              <li class="page-item"><a class="page-link" href="#">2</a></li>
-                              <li class="page-item"><a class="page-link" href="#">3</a></li>
-                              <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
-                            </ul>
-                          </nav>
+                        <?php
+                           get_template_part( 'template-parts/content', 'paginacion');
+                           echo bootstrap_pagination();
+                        ?>
                     </div>   
                 <!--Paginación-->
             </div>
